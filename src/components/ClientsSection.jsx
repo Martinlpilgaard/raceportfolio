@@ -1,5 +1,6 @@
 import ClientRow from "./ClientRow";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router";
 
 export default function ClientsSection() {
   const [clients, setClients] = useState([]);
@@ -17,9 +18,13 @@ export default function ClientsSection() {
       <div className="headline-container">
         <h2>Clients</h2>
       </div>
-      {clients.map(client => (
-        <ClientRow client={client} key={client.id} />
+      {clients.map((client) => (
+        <div key={client.id}>
+          <ClientRow client={client} />
+          <NavLink to={`/clients/${client.id}`}>Læs mere</NavLink>
+        </div>
       ))}
     </section>
   );
+  console.log(clients);
 }

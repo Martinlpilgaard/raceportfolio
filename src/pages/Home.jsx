@@ -1,7 +1,4 @@
 import BannerImage from "../components/BannerImage";
-import ClientsSection from "../components/ClientsSection";
-import ContactSection from "../components/ContactSection";
-import CVHero from "../components/CVHero";
 import Expertise from "../components/Expertise";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -12,10 +9,7 @@ export default function Home() {
     <>
       <Header />
       <Expertise />
-      <ClientsSection />
-      <CVHero />
       <BannerImage />
-      <ContactSection />
       <Footer />
       <ScrollToTopBtn />
     </>
